@@ -10,6 +10,7 @@ import Functional from './Functional';
 import Addmore from './Addmore';
 import Context from './Context';
 import Forecast from './Forecast';
+import Forecasts from './Forecasts';
 
 
 const posts = [
@@ -27,7 +28,7 @@ function App() {
   {/* <Functional />,
   <Addmore />,
   <Context /> */}
-  <Forecast />
+  {/* <Forecast /> */}
   </div>
   );
 }
