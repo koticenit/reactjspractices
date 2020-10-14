@@ -11,6 +11,7 @@ import Addmore from './Addmore';
 import Context from './Context';
 import Forecast from './Forecast';
 import Forecasts from './Forecasts';
+import Routes from './route';
 
 
 const posts = [
@@ -19,17 +20,9 @@ const posts = [
 ];
 function App() {
   return (
-  <div>
-  {
-  /* <Welcomes name="Sara" age="25" qualification="Degree" />,
-  <Clock />,
-  <Toggle />,
-  <NameForm />, */}
-  {/* <Functional />,
-  <Addmore />,
-  <Context /> */}
-  {/* <Forecast /> */}
-  </div>
+  
+   <Routes />
+
   );
 }
 

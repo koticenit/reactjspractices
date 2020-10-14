@@ -77,3 +77,14 @@
 {
   margin-left: 80vh;
 }
+.rightvalue
+{
+  text-align: right;
+}
+.rightdivsearch
+{ 
+  display: inline-block; 
+  text-align: right; 
+  width: 96%;
+  padding: 13px;
+}

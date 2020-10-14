@@ -12,7 +12,7 @@ class Routes extends Component{
             <BrowserRouter>    
              <Switch>
              <Route exact path='/' component={Forecast} />
-            <Route exact path="/Forecasts/:id" component={Forecasts} />
+            <Route exact path="/Forecasts/:name/:id" component={Forecasts} />
             </Switch>
             </BrowserRouter>
             </div>

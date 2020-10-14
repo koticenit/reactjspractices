@@ -5,13 +5,7 @@ import weather from './weather.png';
 import './App.css';
 // import React  from 'react';
 import React, { useState, useEffect } from "react";
-
-// const gitHubUrl ="http://api.openweathermap.org/data/2.5/forecast?q=hyderabad&cnt=4&appid=ce5cbb754c954329a69f2f8083ebedb9";
-const gitHubUrl ="http://api.openweathermap.org/data/2.5/forecast?q=hyderabad&appid=ce5cbb754c954329a69f2f8083ebedb9";
-
-
-
-  //window.location.reload(false);
+import { format } from 'date-fns';
 
 function Forecasts() {
 
@@ -21,11 +15,15 @@ function Forecasts() {
   const [name, setName] = useState("");
 
   var ResponseURL=window.location.href;
-var domain = ResponseURL.split('/');
-let datetime=domain[domain.length - 1];
+  var domain = ResponseURL.split('/');
+  let datetime=domain[domain.length - 1];
+  let cityname=domain[domain.length - 2];
+  const gitHubUrl ="http://api.openweathermap.org/data/2.5/forecast?q="+cityname+"&appid=ce5cbb754c954329a69f2f8083ebedb9";
 
-var domains = datetime.split('%');
-let date=domains[domains.length - 2];
+
+
+  var domains = datetime.split('%');
+  let date=domains[domains.length - 2];
 
 
   useEffect(() => {
@@ -55,7 +53,7 @@ let date=domains[domains.length - 2];
         <div class="demo">
           <div> 
               <br />
-              <h1 class="margin-center">Location : Hyderabad</h1>
+              <h1 class="margin-center">Location : {cityname}</h1>
               {/* {userList.map((forecast,index) => ( */}
                 {userList.filter(name => name.dt_txt.includes(date)).map((forecast,index) => (
               
